@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 // import './App.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { incNumber, decNumber } from './actions/index';
+import { useSelector, useDispatch } from "react-redux";
+import { incNumber, decNumber } from "./actions/index";
 
 const App = () => {
   const myState = useSelector((state) => state.changeValue);
@@ -13,14 +13,16 @@ const App = () => {
         <div className="flex p-4  ">
           <button
             className="bg-red-400 rounded h-11 w-11 "
-            onclick={() => dispatch(decNumber())}
+            onClick={() => dispatch(decNumber())}
           >
             -
           </button>
-          <input className="w-[50px] text-center" type="text" value={myState} />
+          <div className="flex justify-center items-center mx-10 font-bold">
+            {myState}
+          </div>
           <button
             className="bg-red-400 rounded h-11 w-11"
-            onclick={() => dispatch(incNumber())}
+            onClick={() => dispatch(incNumber())}
           >
             +
           </button>
