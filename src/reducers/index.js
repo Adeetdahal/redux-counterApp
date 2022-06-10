@@ -1,8 +1,10 @@
-import changeValue from './changeValue';
+import counter from './counter';
+import isLogged from './isLogged';
 
 import { combineReducers } from 'redux';
 
 const rootReducers = combineReducers({
-  changeValue,
+  counter,
+  isLogged,
 });
 export default rootReducers;
